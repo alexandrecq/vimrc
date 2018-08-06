@@ -16,8 +16,8 @@ set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
 " set mouse=nicr
 
-colorscheme desert
-" colorscheme peaksea
+" colorscheme desert
+colorscheme peaksea
 
 " Set backup options
 set backup
