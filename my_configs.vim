@@ -37,8 +37,8 @@ nnoremap FM :set foldmethod=marker<cr>
 " Ack.vim
 noremap <leader>a :Ack <cword><cr>
 
-" Comment string for ini? (not working)
-" autocmd Filetype ini setlocal commentstring=#\ %s
+" Comment string for ini
+autocmd Filetype dosini setlocal commentstring=#\ %s
 
 " Need to fix tab max length
 "set guitablabel=%-0.12t%M
