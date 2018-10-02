@@ -15,9 +15,10 @@ set number "show line numbers
 set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
 " set mouse=nicr
+set wildmode=longest:longest,list,full
 
-" colorscheme desert
-colorscheme peaksea
+colorscheme desert
+" colorscheme peaksea
 
 " Set backup options
 set backup
@@ -26,6 +27,7 @@ set writebackup
 set backupdir=~/.vim_runtime/temp_dirs,.
 set directory=~/.vim_runtime/temp_dirs,.
 
+" Tab switching keys
 map <leader>tr :tabr<cr>
 map <leader>tl :tabl<cr>
 map <C-h> :tabp<cr>
