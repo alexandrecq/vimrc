@@ -17,8 +17,8 @@ set mouse=a     "enables use of mouse, also allows Visual Block selection while 
 " set mouse=nicr
 set wildmode=longest:longest,list,full
 
-colorscheme desert
-" colorscheme peaksea
+" colorscheme desert
+colorscheme peaksea
 
 " Set backup options
 set backup
@@ -56,3 +56,6 @@ au FileType python map <buffer> FI :set foldmethod=indent<cr>
 let g:ale_linters = {'python': ['flake8', 'pylint'],}
 " Fix Python files with autopep8 and yapf
 let g:ale_fixers = {'python': ['autopep8', 'yapf'],}
+
+" Ctrlp config
+let g:ctrlp_working_path_mode = 'ra' 
