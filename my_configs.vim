@@ -10,7 +10,8 @@ nnoremap <leader>eb :sp ~/.bash_profile<CR>"   edit bash_profile
 nnoremap <leader>s :mksession!<CR> :xa<CR>
 
 set visualbell
-set number "show line numbers
+" set number "show line numbers
+set nonumber "show line numbers
 " set cursorline "show line under cursor position
 set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
@@ -56,6 +57,11 @@ au FileType python map <buffer> FI :set foldmethod=indent<cr>
 let g:ale_linters = {'python': ['flake8', 'pylint'],}
 " Fix Python files with autopep8 and yapf
 let g:ale_fixers = {'python': ['autopep8', 'yapf'],}
+let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
+" let g:ale_python_pylint_change_directory = 0
+" let g:ale_python_flake8_change_directory = 0
+" let g:ale_python_pylint_use_global=1
+" let g:ale_echo_msg_format='[%linter%] [%severity%] %code% %s'
 
 " Ctrlp config
 let g:ctrlp_working_path_mode = 'ra' 
