@@ -1,3 +1,5 @@
+" ACQ's vimrc for amix configuration
+" Should be copied to ~/.vim_runtime/my_configs.vim
 
 " Replace buffer edit with qq, quit with q
 map <leader>qq :e ~/buffer<cr>
@@ -17,8 +19,13 @@ set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
 " set mouse=nicr
 set wildmode=longest:longest,list,full
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+" let g:EditorConfig_indent_style = 'space' " doesn't work, just disable indent_style
+" let g:autoclose_on = 0  "disable automatic closing of {}() etc
+" let g:pear_tree_smart_openers = 1
+" let g:pear_tree_smart_closers = 1
 
-" colorscheme desert
+colorscheme desert
 colorscheme peaksea
 
 " Set backup options
@@ -42,6 +49,8 @@ noremap <leader>a :Ack <cword><cr>
 
 " Comment string for ini
 autocmd Filetype dosini setlocal commentstring=#\ %s
+autocmd Filetype cpp set commentstring=//\ %s
+autocmd Filetype cuda set commentstring=//\ %s
 
 " Need to fix tab max length
 "set guitablabel=%-0.12t%M
