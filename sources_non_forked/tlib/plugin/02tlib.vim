@@ -74,7 +74,6 @@ command! -nargs=1 -complete=command TBrowseOutput call tlib#cmd#BrowseOutput(<q-
 "
 " EXAMPLES: >
 "   TBrowseScriptnames 
-<<<<<<< HEAD
 command! -nargs=0 TBrowseScriptnames call tlib#cmd#TBrowseScriptnames()
 
 
@@ -86,9 +85,6 @@ command! -nargs=1 Texecqfl <args> | call tlib#qfl#QflList(getqflist())
 " :display: :Texecloc CMD
 " Run CMD and display the quickfix list.
 command! -nargs=1 Texecloc <args> | call tlib#qfl#QflList(getloclist(0))
-=======
-" command! -nargs=0 -complete=command TBrowseScriptnames call tlib#cmd#TBrowseScriptnames()
->>>>>>> 5be20d5548eae9c0f351baa4e980d6ffd45c4755
 
 
 " :display: :Tlibtrace GUARD, VAR1, VAR2...
