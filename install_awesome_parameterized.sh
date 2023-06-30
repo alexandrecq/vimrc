@@ -19,9 +19,15 @@ try
 catch
 endtry"
 
+<<<<<<< HEAD
 if [ "$2" = "--all" ]; then
     USERS=$(ls -l /home | awk '{if(NR>1)print $9}')
     for user in $USERS; do
+=======
+if [ $2 == "--all" ]; then
+    USERS=$(ls -l /home | awk '{if(NR>1)print $9}')
+    for user in ${USERS[*]}; do
+>>>>>>> 5be20d5548eae9c0f351baa4e980d6ffd45c4755
         homepath=$(eval echo "~$user")
         IFS=''
         echo $VIMRC > ${homepath}/.vimrc
