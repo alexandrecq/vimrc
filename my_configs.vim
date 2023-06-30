@@ -19,11 +19,12 @@ set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
 " set mouse=nicr
 set wildmode=longest:longest,list,full
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " let g:EditorConfig_indent_style = 'space' " doesn't work, just disable indent_style
 " let g:autoclose_on = 0  "disable automatic closing of {}() etc
 " let g:pear_tree_smart_openers = 1
 " let g:pear_tree_smart_closers = 1
+set shortmess-=S
 
 colorscheme desert
 colorscheme peaksea
