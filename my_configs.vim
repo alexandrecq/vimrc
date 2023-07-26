@@ -68,10 +68,13 @@ let g:ale_linters = {'python': ['flake8', 'pylint'],}
 " Fix Python files with autopep8 and yapf
 let g:ale_fixers = {'python': ['autopep8', 'yapf'],}
 let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
+" Set the path to the global .flake8 file
+let g:python_flake8_options = '--config=~/.flake8'
 " let g:ale_python_pylint_change_directory = 0
 " let g:ale_python_flake8_change_directory = 0
 " let g:ale_python_pylint_use_global=1
 " let g:ale_echo_msg_format='[%linter%] [%severity%] %code% %s'
+let g:ale_virtualtext_cursor=0
 
 " Ctrlp config
 let g:ctrlp_working_path_mode = 'ra' 
