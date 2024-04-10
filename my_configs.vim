@@ -13,7 +13,7 @@ nnoremap <leader>s :mksession!<CR> :xa<CR>
 
 set visualbell
 " set number "show line numbers
-set nonumber "show line numbers
+set nonumber " don't show line numbers
 " set cursorline "show line under cursor position
 set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
@@ -24,7 +24,7 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " let g:autoclose_on = 0  "disable automatic closing of {}() etc
 " let g:pear_tree_smart_openers = 1
 " let g:pear_tree_smart_closers = 1
-set shortmess-=S
+set shortmess-=S  "show search count
 
 colorscheme desert
 colorscheme peaksea
@@ -61,6 +61,7 @@ autocmd Filetype cuda set commentstring=//\ %s
 " Change foldmethod autocmd in filetype for python 
 " :nunmap <buffer> F
 au FileType python map <buffer> FI :set foldmethod=indent<cr>
+map <buffer> FS :set foldmethod=syntax<cr>
 
 " ALE config
 " Check Python files with flake8 and pyling
