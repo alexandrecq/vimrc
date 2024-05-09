@@ -13,21 +13,20 @@ nnoremap <leader>s :mksession!<CR> :xa<CR>
 
 set visualbell
 " set number "show line numbers
-set nonumber " don't show line numbers
+set nonumber "show line numbers
 " set cursorline "show line under cursor position
 set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
 " set mouse=nicr
 set wildmode=longest:longest,list,full
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-" let g:EditorConfig_indent_style = 'space' " doesn't work, just disable indent_style
-" let g:autoclose_on = 0  "disable automatic closing of {}() etc
-" let g:pear_tree_smart_openers = 1
-" let g:pear_tree_smart_closers = 1
-set shortmess-=S  "show search count
+set incsearch
+set hlsearch
+set laststatus=2
 
-colorscheme desert
+" colorscheme desert
 colorscheme peaksea
+" colorscheme monokai
+syntax enable
 
 " Set backup options
 set backup
@@ -48,10 +47,12 @@ nnoremap FM :set foldmethod=marker<cr>
 " Ack.vim
 noremap <leader>a :Ack <cword><cr>
 
+" Comment shortcut consistent w/ jupyterlab-vim (not working)
+" xnoremap <C-/> gc
+" xnoremap <C-/> <Plug>CommentaryLine
+
 " Comment string for ini
 autocmd Filetype dosini setlocal commentstring=#\ %s
-autocmd Filetype cpp set commentstring=//\ %s
-autocmd Filetype cuda set commentstring=//\ %s
 
 " Need to fix tab max length
 "set guitablabel=%-0.12t%M
@@ -61,14 +62,14 @@ autocmd Filetype cuda set commentstring=//\ %s
 " Change foldmethod autocmd in filetype for python 
 " :nunmap <buffer> F
 au FileType python map <buffer> FI :set foldmethod=indent<cr>
-map <buffer> FS :set foldmethod=syntax<cr>
 
 " ALE config
 " Check Python files with flake8 and pyling
 let g:ale_linters = {'python': ['flake8', 'pylint'],}
 " Fix Python files with autopep8 and yapf
 let g:ale_fixers = {'python': ['autopep8', 'yapf'],}
-let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
+" let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
+let g:ale_python_pylint_options = '--rcfile '.expand('~/.pylintrc')
 " let g:ale_python_pylint_change_directory = 0
 " let g:ale_python_flake8_change_directory = 0
 " let g:ale_python_pylint_use_global=1
