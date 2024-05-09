@@ -13,7 +13,7 @@ nnoremap <leader>s :mksession!<CR> :xa<CR>
 
 set visualbell
 " set number "show line numbers
-set nonumber " don't show line numbers
+set nonumber "show line numbers
 " set cursorline "show line under cursor position
 set showcmd "show latest command in bottom right, useful for <leader> mappings
 set mouse=a     "enables use of mouse, also allows Visual Block selection while holding, but disables moving cursor with scrolling :(
@@ -25,9 +25,14 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " let g:pear_tree_smart_openers = 1
 " let g:pear_tree_smart_closers = 1
 set shortmess-=S  "show search count
+set incsearch
+set hlsearch
+set laststatus=2
 
-colorscheme desert
+" colorscheme desert
 colorscheme peaksea
+" colorscheme monokai
+syntax enable
 
 " Set backup options
 set backup
@@ -47,6 +52,10 @@ nnoremap FM :set foldmethod=marker<cr>
 
 " Ack.vim
 noremap <leader>a :Ack <cword><cr>
+
+" Comment shortcut consistent w/ jupyterlab-vim (not working)
+" xnoremap <C-/> gc
+" xnoremap <C-/> <Plug>CommentaryLine
 
 " Comment string for ini
 autocmd Filetype dosini setlocal commentstring=#\ %s
@@ -68,7 +77,7 @@ map <buffer> FS :set foldmethod=syntax<cr>
 let g:ale_linters = {'python': ['flake8', 'pylint'],}
 " Fix Python files with autopep8 and yapf
 let g:ale_fixers = {'python': ['autopep8', 'yapf'],}
-let g:ale_python_pylint_options = '--rcfile ~/.pylintrc'
+let g:ale_python_pylint_options = '--rcfile '.expand('~/.pylintrc')
 " Set the path to the global .flake8 file
 let g:python_flake8_options = '--config=~/.flake8'
 " let g:ale_python_pylint_change_directory = 0
